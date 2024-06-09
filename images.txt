@@ -1,5 +1,2 @@
-alpine
-python:alpine3.19
-kasmweb/nginx:1.25.3
---platform linux/arm64 cooderl/wewe-rss-sqlite:latest
-"alist" xhofe/alist:latest
+xhofe/alist:latest
+run -d --restart=unless-stopped -v /etc/alist:/opt/alist/data -p 5244:5244 -e PUID=0 -e PUID=0 -e UMASK=022 --name="alist" xhofe/alist:latest
